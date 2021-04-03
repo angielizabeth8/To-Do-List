@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package testtask;
 import java.util.Scanner;
 import java.util.Date;
@@ -14,9 +10,7 @@ import java.text.SimpleDateFormat;
  */
 public class TestTask {
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
         
         //espacio pa cosas
@@ -28,12 +22,9 @@ public class TestTask {
         Date hoy=new Date(), date=new Date();
         SimpleDateFormat dateForm = new SimpleDateFormat("dd/MM/YYYY");
  
-        //tareas[1]=task1;
-        //System.out.print(tareas[0].getDescripcion());
         
         System.out.print("*BIENVENIDO*\n");
-        System.out.print("Hoy es "+dateForm.format(hoy)+"\n");////////////////////////////
-        //System.out.print("La descripcion es : "+task1.getDescripcion()//);
+        System.out.print("Hoy es "+dateForm.format(hoy)+"\n");
         
         do{
            menu.menuPrincipal();
@@ -41,8 +32,9 @@ public class TestTask {
            sc.nextLine();
            
            switch(opcionMenu){
-               case 1:
-                   if(totalTask<3){
+               
+               case 1: //nueva tarea
+                   if(totalTask<3){ //evalúa que haya menos de 3 tareas
                        
                        System.out.print("Descripción: ");
                        descripcion = sc.nextLine();
@@ -54,7 +46,7 @@ public class TestTask {
                        date.setYear(sc.nextInt());
                        sc.nextLine();
                        
-                       if(task1.getDescripcion()==null){
+                       if(task1.getDescripcion()==null){ //evalua dónde almacenarla
                            task1 = new Task(descripcion,date);
                        } else if (task2.getDescripcion()==null){
                            task2 = new Task(descripcion,date);
@@ -80,7 +72,7 @@ public class TestTask {
                    switch(numTask){ //con un arreglo Task me ahorraría esto, hay muchas repeticiones de código
                        case 1:
                            
-                           if(task1.getDescripcion().isEmpty()){
+                           if(task1.getDescripcion().isEmpty()){ //evalua si existe
                                System.out.print("No existe la tarea nº "+numTask+"\n");
                            } else {
                                task1.mostrarTarea();

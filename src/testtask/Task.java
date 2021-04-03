@@ -1,13 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package testtask;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 /**
- *
  * @author angie_000
  */
 public class Task {
@@ -27,7 +22,7 @@ public class Task {
     }
     
     public Task(){
-        //this.descripcion="*";
+        
     }
     
     
