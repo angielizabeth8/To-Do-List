@@ -31,8 +31,9 @@ public class Task {
         this.completo = !(this.completo);
     }
     
-    void mostrarTarea(){ //creo que lo correco sería que vaya en main
-        System.out.println("•Tarea: "+descripcion+
+    void mostrarTarea(int numero){ 
+        System.out.println("---Task "+numero+" ---"+
+                "\n  Tarea: "+descripcion+
                 "\n  Estado completo: "+(completo)+
                 "\n  Fecha límite: "+dateForm.format(fechaLimite)+"\n");
     }
